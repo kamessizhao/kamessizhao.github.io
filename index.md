@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <title>Jason Liang</title>
+  <title>Jiayu Kamessi Zhao</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -45,31 +45,27 @@
 
     <div class="row" style="margin-top: 10%">
         <div class="seven columns">
-            <h2>Jason Cheuk Nam Liang</h2>
+            <h2>Jiayu Kamessi Zhao</h2>
             <h5>Operations Research Center <br>
                 Massachusetts Institute of Technology</h5>
-            <p><b>Email</b>: jcnliang (at) mit (dot) edu <br>
-                <a href="https://www.linkedin.com/in/jason-cheuk-nam-liang-307459113/">Linkedin profile</a>
-                <!-- <b>CV</b>: <a href="http://www.mit.edu/~bsturt/brads_cv.pdf">PDF</a>, <a href="https://scholar.google.com/citations?user=eLXWjHoAAAAJ&amp;hl=en">Google scholar</a> -->
+            <p><b>Email</b>: kamessi (at) mit (dot) edu <br>
+                <a href="https://www.linkedin.com/in/jiayu-kamessi-zhao-1a2b92132/">Linkedin profile</a>
+                <!-- <b>CV</b>: <a href="http://www.mit.edu/~bsturt/brads_cv.pdf">PDF</a>,  -->
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=UvponD8AAAAJ">Google scholar</a>
                 </p>
         </div>
         <div class="four columns">
-            <img src="./jason_pic.jpg" width="120%">
+            <img src="photo_square.jpg" width="120%">
         </div>
     </div>
     <div class="row" style="margin-top: 5%"> </div>
 
 
     <h4> About </h4>
-    <p>I am a third-year PhD student in the <a href="https://orc.mit.edu/">Operations Research Center</a> at MIT, where I am co-advised by <a href="http://web.mit.edu/jaillet/www/">Prof. Patrick Jaillet</a> and <a href="http://www.mit.edu/~golrezae/">Prof. Negin Golrezaei</a>.
-        My research interests lie at the intersection of incentive-aware learning, mechanism design, and game theory, with applications in pricing, revenue management, and online advertisement markets.
-        Prior to my PhD, I graduated Summa Cum Laude from Columbia University in 2018 with a B.S. degree in Operations Research and Financial Engineering. During my undergraduate studies, I had the pleasure to work with <a href="http://www.columbia.edu/~ae2516/">Prof. Adam Elmachtoub</a>, <a href="https://ieor.columbia.edu/faculty/garud-iyengar">Prof. Garud Iyengar</a>
-        and <a href="https://www0.gsb.columbia.edu/faculty/pglasserman/Other/">Prof. Paul Glasserman</a>.
+    <p>I am a second-year PhD student in the <a href="https://orc.mit.edu/">Operations Research Center</a> at MIT, where I am advised by <a href="https://mitmgmtfaculty.mit.edu/dfreund/">Prof. Daniel Freund</a>.
+        My research interests lie at the intersection of online algorithms, stochastic decision-making, and game theory, with applications in pricing and revenue management. Prior to my PhD, I graduated Summa Cum Laude from Columbia University in 2020 with a B.S. degree in Operations Research: Financial Engineering. During my undergraduate studies, I had the pleasure to work with <a href="https://www.ieor.columbia.edu/faculty/jay-sethuraman">Prof. Jay Sethuraman</a>, <a href="http://www.weijiang-finance.com/">Prof. Wei Jiang</a>
+        and <a href="https://www.engineering.columbia.edu/faculty/soulaymane-kachani">Prof. Soulaymane Kachani</a>.
     </p>
-
-    <!-- <p>My research interests lie at the intersection of incentive compatible learning, mechanism design, and game theory, with applications in online advertisement markets, revenue management, and auction design.  </p> -->
-    <!-- <p> More information is available in my <a href="http://www.mit.edu/~bsturt/brads_cv.pdf">CV</a>. -->
-    <!-- </p> -->
 
     <hr>
 
