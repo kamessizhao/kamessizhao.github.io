@@ -116,7 +116,8 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: bolder; /* Change font weight to bolder */
+  color: #333; /* Change color to a darker shade */
 }
 
 /**
