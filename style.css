@@ -11,6 +11,7 @@ body {
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding-bottom: 8px;
 	margin: 0;
+	font-size: 12px; /* Adjust this value to make the font size larger */
 }
 
 #layout-menu {
@@ -369,4 +370,17 @@ img {
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
+}
+
+/* Custom styles for nested lists */
+ul {
+    list-style-type: circle;
+}
+
+ul ul {
+    list-style-type: none;
+}
+
+ul ul li::before {
+    content: "- ";
 }
