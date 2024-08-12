@@ -1,15 +1,16 @@
 
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149469209-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPHE3BK83R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-149469209-1');
-</script>
+    gtag('config', 'G-QPHE3BK83R');
+    </script>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -38,71 +39,181 @@
 
   <!-- Custom CSS -->
   <style>
-      body {
-          font-size: 18px; /* Adjust this value to change the body text size */
-      }
-/*       ul {
-          list-style-type: circle;
-      }
-      ul ul {
-          list-style-type: none;
-          padding-left: 20px;
-      }
-      ul ul li:before {
-          content: "-";
-          margin-right: 5px;
-      } */
-      .button-link {
-          background-color: transparent;
-          color: gray;
-          border: 1px solid gray;
-          padding: 8px 5px; /* Adjust padding as needed */
-          line-height: 1;
-          text-align: center;
-          text-decoration: none;
-          font-size: 10px;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          height: 16px; /* Adjust height as needed */
-          margin: 0;
-      }
-  </style>
+          body {
+              font-size: 18px; /* Adjust this value to change the body text size */
+          }
+          ul {
+              padding-left: 5px; /* Adjust the indentation as needed */
+          }
+          b {
+              font-weight: 600;
+          }
+          .button-link {
+              background-color: transparent;
+              color: gray;
+              border: 1px solid gray;
+              padding: 8px 5px; /* Adjust padding as needed */
+              line-height: 1;
+              text-align: center;
+              text-decoration: none;
+              font-size: 10px;
+              cursor: pointer;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              height: 16px; /* Adjust height as needed */
+              margin: 0;
+          }
+
+          /* Sidebar styling */
+          .sidebar {
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 140px;
+              height: 100%;
+              background-color: #f4f4f4;
+              padding: 20px;
+              box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+              z-index: 2000;
+              overflow-y: auto;
+              transition: transform 0.3s ease;
+              transform: translateX(0);
+          }
+
+          .sidebar a {
+              display: block;
+              color: #13548d;
+              text-decoration: none;
+              padding: 10px;
+              margin-bottom: 5px;
+              font-weight: 600;
+          }
+
+          .sidebar a:hover {
+              background-color: #ddd;
+          }
+
+          /* Hamburger menu button */
+          .menu-button {
+              display: none;
+              position: fixed;
+              top: 10px;
+              left: 10px;
+              z-index: 3000;
+              background-color: #f4f4f4;
+              border: none;
+              padding: 10px;
+              cursor: pointer;
+              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+          }
+
+          /* Content styling */
+          .content {
+              margin-left: 140px; /* Updated margin */
+              padding: 20px;
+              transition: margin-left 0.3s ease;
+          }
+
+          /* Responsive design */
+          @media (max-width: 1350px) {
+              .sidebar {
+                  transform: translateX(-100%);
+              }
+
+              .sidebar.open {
+                  transform: translateX(0);
+              }
+
+              .menu-button {
+                  display: block;
+              }
+
+              .content {
+                  margin-left: 0;
+                  padding-top: 60px; /* Space for the menu button */
+              }
+          }
+      
+          /* Add more margin at the end of the document */
+          .container {
+              padding-bottom: 380px; /* Adjust this value as needed */
+          }
+
+      </style>
 
 </head>
 <body>
+    <button class="menu-button">☰</button>
+
+
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <br>
+            <a href="#about">About Me</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#talks">Talks</a>
+            <a href="#experience">Experience</a>
+            <a href="#activities">Service and Award</a>
+<!--            <a href="#photos">Photos</a>-->
+        </nav>
+
+        <!-- JavaScript to handle sidebar behavior -->
+        <script>
+            // Function to close the sidebar
+            function closeSidebar() {
+                document.querySelector('.sidebar').classList.remove('open');
+            }
+
+            // Attach event listeners after the DOM has fully loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                var links = document.querySelectorAll('.sidebar a');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        closeSidebar(); // Close the sidebar when any link is clicked
+                    });
+                });
+
+                document.querySelector('.menu-button').addEventListener('click', function() {
+                    document.querySelector('.sidebar').classList.toggle('open');
+                });
+            });
+        </script>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 
-    <div class="row" style="margin-top: 10%">
-        <div class="seven columns">
-            <h2>Jiayu Kamessi Zhao</h2>
-            <h5>Operations Research Center <br>
-                Massachusetts Institute of Technology</h5>
-            <p><b>Email</b>: kamessi (at) mit (dot) edu <br>
-                <!-- <b>CV</b>: <a href="http://www.mit.edu/~bsturt/brads_cv.pdf">PDF</a>,  -->
-                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=UvponD8AAAAJ">Google scholar</a><br>
-                <a href="https://www.linkedin.com/in/jiayu-kamessi-zhao-1a2b92132/">Linkedin profile</a>
-                </p>
-        </div>
+    <h2>Jiayu Kamessi Zhao</h2>
+    <h6 style="color: #527bbd;">I am a 5th (final) year PhD student at MIT Operations Research Center</h6>
+    <div class="row" style="margin-top: 0%">
         <div class="four columns">
             <img src="photo_square.jpg" width="120%">
+        </div>
+        <div class="seven columns">
+            <span style="font-size: 105%;font-weight: 500;">
+                <br>
+                <br>Ph.D. in Operations Research at MIT, 2020-2025 (expected)
+                <br>B.S. in Operations Research at Columbia University, 2016-2020
+                <br>
+                <br>kamessi@mit.edu [<a href="mailto:kamessi@mit.edu">✉️</a>]
+                <br><a href="Resume of Jiayu Kamessi Zhao.pdf">My Curriculum Vitae (CV)</a>
+                <br><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=UvponD8AAAAJ">Google scholar</a><br>
+            </span>
         </div>
     </div>
     <div class="row" style="margin-top: 5%"> </div>
 
 
-    <h4> About </h4>
-    <p>I am a final year PhD student at the <a href="https://orc.mit.edu/">Operations Research Center</a> at MIT, where I am advised by <a href="https://mitmgmtfaculty.mit.edu/dfreund/">Prof. Daniel Freund</a>. Prior to my PhD, I graduated Summa Cum Laude from Columbia University in 2020 with a B.S. degree in Operations Research: Financial Engineering. 
+    <h4 id="about"> About Me</h4>
+    <p>I am a final year PhD student at the <a href="https://orc.mit.edu/">Operations Research Center</a> at MIT, where I am advised by <a href="https://mitmgmtfaculty.mit.edu/dfreund/">Prof. Daniel Freund</a>. Prior to my PhD, I graduated Summa Cum Laude from Columbia University in 2020 with a B.S. degree in Operations Research: Financial Engineering.
 <!--       During my PhD and undergraduate studies, I had the pleasure to work with <a href="https://pages.stern.nyu.edu/~ilobel/">Ilan Lobel</a>, <a href="https://sebastienmartin.info/">Sebastien Martin</a>, <a href="https://sites.google.com/usc.edu/chamsi-hssaine">Chamsi Hssaine</a>, <a href="http://www.columbia.edu/~js1353/">Jay Sethuraman</a>, <a href="https://www.engineering.columbia.edu/faculty/soulaymane-kachani">Soulaymane Kachani</a>
         and <a href="http://www.weijiang-finance.com/">Wei Jiang</a>.  -->
     </p>
 
     <p>
-      My research focuses on platform operations and market design problems within gig economies. I am particularly interested in (i) leveraging flexibility in platforms to design innovative policies, and (ii) studying the interactions & implications of flexibility decisions for market design, e.g., developing incentive-compatible methods to introduce technological innovations to gig economy platforms. In tackling these challenges, my works lie at the intersection of game theory, stochastic decision-making, and online algorithms. In summer 2023 and 2024, I worked at UberEats Realtime Pricing Team as an applied scientist PhD intern. Here is my <a href="Resume of Jiayu Kamessi Zhao.pdf">Curriculum Vitae (CV)</a>.
+      My research studies platform operations and market design problems within gig economies. I aim to leverage flexibility inherent in modern platforms to design more innovative policies and drive smarter operational decisions. My recent work studies (i) the interactions among flexibility incentives on different sides of platforms, and (ii) the implications of flexibility decisions for market design, e.g., developing incentive-compatible methods to deploy autonomous vehicles through gig economy platforms. In tackling these challenges, my works lie at the intersection of game theory, stochastic decision-making, and online algorithms. In summer 2023 and 2024, I worked at <a href="https://www.ubereats.com/">Uber Eats</a> Realtime Pricing Team as an applied scientist intern.
     </p>
 
     <p>
@@ -111,7 +222,7 @@
 
     <hr>
 
-    <h4> Publications and Preprints </h4>
+    <h4 id="research"> Publications and Preprints </h4>
     <ul>
         <li>
             <strong><a href="https://doi.org/10.48550/arXiv.2404.04709">Two-sided Flexibility in Platforms</a></strong>
@@ -150,7 +261,6 @@
             </ul>
         </li>
     </ul>
-    <hr>
 
     <h4> Work in Progress </h4>
     <ul>
@@ -161,7 +271,7 @@
     </ul>
     <hr>
 
-    <h4>Teaching</h4>
+    <h4 id="teaching">Teaching</h4>
     <ul>
         <li>Introduction To Operations Management, MIT 15.761 | Teaching Assistant
               <ul>
@@ -196,7 +306,7 @@
         <li> ''Overbooking with Bounded Loss,'' EC'21, Jul 2021; INFORMS, Oct 2021; ORC Student Seminar, Apr 2022.</li>
     </ul> -->
 
-    <h4>Recent Talks</h4>
+    <h4 id="talks">Recent Talks</h4>
     <ul>
         <li> <strong><a href="https://doi.org/10.48550/arXiv.2404.04709">Two-sided Flexibility in Platforms</a></strong>
             <ul>
@@ -228,15 +338,8 @@
 
     <hr>
 
-    <h4> Professional Services </h4>
-    <ul>
-        <li>MIT ORC Seminar Series student coordinator, Fall 2023</li>
-        <li>MIT Operations Management Seminar student co-organizer, 2021-2023</li>
-    </ul>
 
-    <hr>
-
-    <h4> Experiences </h4>
+    <h4 id="experience"> Experiences </h4>
     <ul>
         <li>Research Assistant, 2020 - present</li>
             <ul>
@@ -256,6 +359,14 @@
             </ul>
         </ul>
     <hr>
+    
+    <h4 id="activities"> Professional Services </h4>
+    <ul>
+        <li>MIT ORC Seminar Series student coordinator, Fall 2023</li>
+        <li>MIT Operations Management Seminar student co-organizer, 2021-2023</li>
+    </ul>
+
+<!--    <hr>-->
 
     <h4> Awards and Honors </h4>
     <ul>
