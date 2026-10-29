@@ -1,451 +1,732 @@
-
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2ZF35QR1D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-B2ZF35QR1D');
-    </script>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2ZF35QR1D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B2ZF35QR1D');
+  </script>
 
   <title>Jiayu Kamessi Zhao</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="description" content="Jiayu Kamessi Zhao is an Assistant Professor of Operations, Information, and Technology at Stanford Graduate School of Business.">
+  <meta name="author" content="Jiayu Kamessi Zhao">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%238C1515'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='600' fill='%23fff'%3EK%3C/text%3E%3C/svg%3E">
 
-  <!-- 
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="skeleton.css">
-
-  <!-- Favicn
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="http://www.mit.edu/~bsturt/images/favicon.png">
-
-  <!-- Custom CSS -->
   <style>
-          body {
-              font-size: 18px; /* Adjust this value to change the body text size */
-          }
-          ul {
-              padding-left: 5px; /* Adjust the indentation as needed */
-          }
-          b {
-              font-weight: 600;
-          }
-          .button-link {
-              background-color: transparent;
-              color: gray;
-              border: 1px solid gray;
-              padding: 8px 5px; /* Adjust padding as needed */
-              line-height: 1;
-              text-align: center;
-              text-decoration: none;
-              font-size: 10px;
-              cursor: pointer;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              height: 16px; /* Adjust height as needed */
-              margin: 0;
-          }
+    /* ==========================================================================
+       Single-page academic site. Design follows an al-folio–style template;
+       accent is Northwestern purple used mostly as light, translucent tints.
+       ========================================================================== */
 
-          /* Sidebar styling */
-          .sidebar {
-              position: fixed;
-              left: 0;
-              top: 0;
-              width: 140px;
-              height: 100%;
-              background-color: #f4f4f4;
-              padding: 20px;
-              box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-              z-index: 2000;
-              overflow-y: auto;
-              transition: transform 0.3s ease;
-              transform: translateX(0);
-          }
+    :root {
+      --purple: #4E2A84;                 /* Northwestern purple: links, badges, brand */
+      --purple-deep: #3A1F66;            /* hover state */
+      --heading: #33285A;                /* dark purple-ink for headings */
+      --text: #25232C;
+      --muted: #6C6878;
+      --light-muted: #95919F;
+      --tint-04: rgba(78, 42, 132, 0.04);
+      --tint-06: rgba(78, 42, 132, 0.06);
+      --tint-10: rgba(78, 42, 132, 0.10);
+      --tint-16: rgba(78, 42, 132, 0.16);
+      --tint-32: rgba(78, 42, 132, 0.32);
+      --bg: #ffffff;
+      --max-width: 1100px;
+      --header-h: 3.4rem;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+              "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    }
 
-          .sidebar a {
-              display: block;
-              color: #13548d;
-              text-decoration: none;
-              padding: 10px;
-              margin-bottom: 5px;
-              font-weight: 600;
-          }
+    * { box-sizing: border-box; }
 
-          .sidebar a:hover {
-              background-color: #ddd;
-          }
+    html { font-size: 106.25%; scroll-behavior: smooth; }   /* 17px base */
 
-          /* Hamburger menu button */
-          .menu-button {
-              display: none;
-              position: fixed;
-              top: 10px;
-              left: 10px;
-              z-index: 3000;
-              background-color: #f4f4f4;
-              border: none;
-              padding: 10px;
-              cursor: pointer;
-              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-          }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-          /* Content styling */
-          .content {
-              margin-left: 140px; /* Updated margin */
-              padding: 20px;
-              transition: margin-left 0.3s ease;
-          }
+    ::selection { background: var(--tint-16); }
 
-          /* Responsive design */
-          @media (max-width: 1350px) {
-              .sidebar {
-                  transform: translateX(-100%);
-              }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
 
-              .sidebar.open {
-                  transform: translateX(0);
-              }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { color: var(--purple-deep); text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--tint-32); outline-offset: 2px; border-radius: 2px; }
 
-              .menu-button {
-                  display: block;
-              }
+    b, strong { font-weight: 600; }
+    em { font-style: italic; }
 
-              .content {
-                  margin-left: 0;
-                  padding-top: 60px; /* Space for the menu button */
-              }
-          }
-      
-          /* Add more margin at the end of the document */
-          .container {
-              padding-bottom: 380px; /* Adjust this value as needed */
-          }
+    /* --------------------------------------------------------------------------
+       Top navigation (sticky; links scroll to sections on this page)
+       -------------------------------------------------------------------------- */
 
-      </style>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(var(--tint-06), var(--tint-06)), rgba(255, 255, 255, 0.86);
+      -webkit-backdrop-filter: saturate(1.3) blur(10px);
+      backdrop-filter: saturate(1.3) blur(10px);
+      border-bottom: 1px solid var(--tint-16);
+    }
 
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: var(--header-h);
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+
+    .navbar-brand {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--purple);
+      letter-spacing: 0.01em;
+    }
+    .navbar-brand:hover { color: var(--purple-deep); text-decoration: none; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.45rem;
+      line-height: 1;
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #4F4B5C;
+      font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .nav-links a:hover { color: var(--purple); text-decoration: none; }
+    .nav-links a.active {
+      color: var(--heading);
+      font-weight: 600;
+      border-bottom-color: var(--tint-32);
+    }
+
+    @media (max-width: 900px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.35rem;
+        padding: 0.25rem 0 0.9rem;
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* --------------------------------------------------------------------------
+       Page scaffolding
+       -------------------------------------------------------------------------- */
+
+    main.container {
+      padding-top: 2.25rem;
+      padding-bottom: 3rem;
+    }
+
+    /* keep anchored sections clear of the sticky header */
+    [id] { scroll-margin-top: calc(var(--header-h) + 1.4rem); }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0 0 1.8rem;
+      color: var(--heading);
+    }
+
+    .page-desc {
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+    .page-title + .page-desc { margin-top: -1.4rem; }
+
+    h2.section-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 2.6rem 0 1.1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--tint-16);
+      color: var(--heading);
+    }
+    section + section > h2.section-title:first-child { margin-top: 3.2rem; }
+
+    .site-footer {
+      border-top: 1px solid var(--tint-16);
+      margin-top: 2rem;
+      padding: 1.4rem 0 2.2rem;
+      color: var(--light-muted);
+      font-size: 0.85rem;
+    }
+
+    /* --------------------------------------------------------------------------
+       Profile (About)
+       -------------------------------------------------------------------------- */
+
+    .profile-row {
+      display: flex;
+      flex-direction: row-reverse;   /* photo (first in DOM) sits on the right */
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    .profile-main { flex: 1 1 auto; min-width: 0; }
+    .profile-main p { margin: 0 0 1rem; }
+
+    .profile-side {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .profile-side img {
+      width: 18rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 4px rgba(78, 42, 132, 0.18), 0 0 0 1px var(--tint-06);
+    }
+    .profile-address {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .profile-address span { display: block; white-space: nowrap; }
+    .profile-address .gap { height: 0.8em; }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.9rem;
+      margin: 1.3rem 0 0.4rem;
+    }
+    .profile-links a {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-weight: 500;
+      border: 1px solid var(--tint-16);
+      border-radius: 0.3rem;
+      padding: 0.25rem 0.7rem;
+      color: var(--text);
+      background: var(--tint-04);
+      transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    }
+    .profile-links a:hover {
+      border-color: var(--tint-32);
+      background: var(--tint-10);
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    /* --------------------------------------------------------------------------
+       Publications
+       -------------------------------------------------------------------------- */
+
+    ul.pub-list { list-style: none; margin: 0 0 0.5rem; padding: 0; }
+    .pub-list > li { margin-bottom: 1.5rem; }
+
+    .pub-title {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .pub-authors { display: block; margin-top: 0.1rem; }
+
+    .pub-venue { color: #37334A; }
+
+    .pub-links { display: inline; }
+    .pub-links .pub-badge { margin-left: 0.3rem; }
+    .pub-authors + .pub-links > .pub-badge:first-child { margin-left: 0; }
+
+    a.pub-badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--purple);
+      border: 1px solid var(--tint-32);
+      border-radius: 0.25rem;
+      padding: 0.12rem 0.5rem;
+      line-height: 1.5;
+      vertical-align: 0.1em;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    a.pub-badge:hover {
+      background: var(--tint-10);
+      border-color: var(--purple);
+      color: var(--purple-deep);
+      text-decoration: none;
+    }
+
+    ul.pub-notes {
+      list-style: disc;
+      margin: 0.3rem 0 0;
+      padding-left: 1.25rem;
+      font-size: 0.95rem;
+      color: #37334A;
+    }
+    .pub-notes > li { margin-bottom: 0.1rem; }
+
+    .pub-award {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      color: var(--purple-deep);
+      font-weight: 500;
+    }
+    .pub-award a { color: inherit; }
+    .pub-award a:hover { color: inherit; text-decoration: underline; }
+
+    /* --------------------------------------------------------------------------
+       Generic entries (talks, teaching)
+       -------------------------------------------------------------------------- */
+
+    ul.entry-list { list-style: none; margin: 0; padding: 0; }
+    .entry-list > li { margin-bottom: 1.6rem; }
+
+    .entry-title {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .entry-meta { color: var(--muted); }
+
+    ul.detail-list {
+      list-style: disc;
+      margin: 0.35rem 0 0;
+      padding-left: 1.25rem;
+    }
+    .detail-list > li { margin-bottom: 0.15rem; }
+
+    ul.plain-list {
+      list-style: disc;
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .plain-list > li { margin-bottom: 0.55rem; }
+
+    li::marker { color: var(--tint-32); }
+
+    /* --------------------------------------------------------------------------
+       Phones: name first, then photo, then text
+       -------------------------------------------------------------------------- */
+
+    @media (max-width: 700px) {
+      .profile-row { flex-direction: column; align-items: stretch; gap: 0; }
+      .profile-side, .profile-main { display: contents; }
+      .profile-main .page-title { order: 1; }
+      .profile-main .page-desc { order: 2; margin-bottom: 1rem; }
+      .profile-side img { order: 3; width: 100%; max-width: 18rem; align-self: center; margin-bottom: 1.2rem; }
+      .profile-address span { white-space: normal; }
+      .profile-main > p:not(.page-desc), .profile-links { order: 4; }
+      .profile-address { order: 5; text-align: left; margin-top: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .nav-links a, .profile-links a, a.pub-badge { transition: none; }
+    }
+  </style>
 </head>
+
 <body>
-    <button class="menu-button">☰</button>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Site navigation">
+      <a class="navbar-brand" href="#about">Jiayu&nbsp;Kamessi&nbsp;Zhao</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about" class="active">about</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="CV_of_Jiayu_Kamessi_Zhao.pdf" target="_blank" rel="noopener">cv</a></li>
+        <li><a href="#talks">talks</a></li>
+        <li><a href="#teaching">teaching</a></li>
+        <li><a href="#awards">awards</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main class="container">
 
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar">
-            <br>
-            <a href="#about">About Me</a>
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#talks">Talks</a>
-            <!-- <a href="#experience">Experience</a> -->
-            <a href="#activities">Service and Award</a>
-<!--            <a href="#photos">Photos</a>-->
-        </nav>
-
-        <!-- JavaScript to handle sidebar behavior -->
-        <script>
-            // Function to close the sidebar
-            function closeSidebar() {
-                document.querySelector('.sidebar').classList.remove('open');
-            }
-
-            // Attach event listeners after the DOM has fully loaded
-            document.addEventListener('DOMContentLoaded', function() {
-                var links = document.querySelectorAll('.sidebar a');
-                links.forEach(function(link) {
-                    link.addEventListener('click', function() {
-                        closeSidebar(); // Close the sidebar when any link is clicked
-                    });
-                });
-
-                document.querySelector('.menu-button').addEventListener('click', function() {
-                    document.querySelector('.sidebar').classList.toggle('open');
-                });
-            });
-        </script>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-
-    <h2>Jiayu Kamessi Zhao</h2>
-<!--     <h6 style="color: #527bbd;">I am a 5th (final) year PhD student at MIT Operations Research Center</h6> -->
-    <div class="row" style="margin-top: 0%">
-        <div class="four columns">
-            <img src="photo_square.jpg" width="120%">
+    <!-- ===================== About ===================== -->
+    <div class="profile-row" id="about">
+      <aside class="profile-side">
+        <img src="photo_square.jpg" alt="Portrait of Jiayu Kamessi Zhao" width="320" height="320">
+        <div class="profile-address">
+          <span>Ph.D. in Operations Research, MIT</span>
+          <span>B.S. in Operations Research, Columbia University</span>
+          <span class="gap" aria-hidden="true"></span>
+          <span>Stanford Graduate School of Business</span>
+          <span><a href="mailto:kamessi@stanford.edu">kamessi@stanford.edu</a></span>
         </div>
-        <div class="seven columns">
-            <span style="font-size: 105%;font-weight: 500;">
-                <br>
-                <br>Ph.D. in Operations Research at MIT, 2020-2025
-                <br>B.S. in Operations Research at Columbia University, 2016-2020
-                <br>
-                <br>kamessi@stanford.edu [<a href="mailto:kamessi@stanford.edu">✉️</a>]
-                <br><a href="Resume of Jiayu Kamessi Zhao.pdf">My Curriculum Vitae (CV)</a>
-                <br><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=UvponD8AAAAJ">Google scholar</a><br>
-            </span>
+      </aside>
+
+      <div class="profile-main">
+        <h1 class="page-title">Jiayu Kamessi Zhao</h1>
+        <p class="page-desc">Assistant Professor of Operations, Information, and Technology, Stanford Graduate School of Business</p>
+
+        <p>I am an Assistant Professor of Operations, Information, and Technology at Stanford <a href="https://www.gsb.stanford.edu/faculty-research/faculty/kamessi-zhao">Graduate School of Business</a>.</p>
+
+        <p>My research studies how service platforms can leverage operational policies and market design to improve efficiency. My recent work examines AI-enabled transportation and mixed-autonomy systems, including robotaxi fleet operations.</p>
+
+        <p>I completed my PhD in Operations Research at MIT and my undergraduate studies at Columbia University. In 2025&ndash;2026, I was a postdoctoral researcher at <a href="https://waymo.com/">Waymo</a>&rsquo;s marketplace and supply optimization team.</p>
+
+        <div class="profile-links">
+          <a href="CV_of_Jiayu_Kamessi_Zhao.pdf" target="_blank" rel="noopener"><b>Curriculum Vitae (CV)</b></a>
+          <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=UvponD8AAAAJ">Google Scholar</a>
         </div>
+      </div>
     </div>
-    <div class="row" style="margin-top: 5%"> </div>
 
+    <!-- ===================== Research ===================== -->
+    <section id="research">
+      <h2 class="section-title">Publications and Preprints</h2>
+      <ul class="pub-list">
 
-    <h4 id="about"> About Me</h4>
-    <p>I am an Assistant Professor of Operations, Information, and Technology at Stanford <a href="https://www.gsb.stanford.edu/faculty-research/faculty/kamessi-zhao">Graduate School of Business</a>.
-<!--       I graduated from the <a href="https://orc.mit.edu/">Operations Research Center</a> at MIT, where I was fortunate to be advised by <a href="https://mitmgmtfaculty.mit.edu/dfreund/">Prof. Daniel Freund</a>. Prior to MIT, I graduated Summa Cum Laude from Columbia University in 2020 with a B.S. degree in Operations Research. During my PhD and undergraduate studies, I had the pleasure to work with <a href="https://pages.stern.nyu.edu/~ilobel/">Ilan Lobel</a>, <a href="https://sebastienmartin.info/">Sebastien Martin</a>, <a href="https://sites.google.com/usc.edu/chamsi-hssaine">Chamsi Hssaine</a>, <a href="http://www.columbia.edu/~js1353/">Jay Sethuraman</a>, <a href="https://www.engineering.columbia.edu/faculty/soulaymane-kachani">Soulaymane Kachani</a>
-        and <a href="http://www.weijiang-finance.com/">Wei Jiang</a>.  -->
-    </p>
-
-    <p>
-        My research studies how service platforms can leverage operational policies and market design to improve efficiency. My recent work examines AI-enabled transportation and mixed-autonomy systems, including robotaxi fleet operations.
-    </p>
-
-    <p>
-        I completed my PhD in Operations Research at MIT and my undergraduate studies at Columbia University. In 2025-2026, I was a postdoctoral researcher at <a href="https://waymo.com/">Waymo</a>'s marketplace and supply optimization team.
-    </p>
-
-    <hr>
-
-    <h4 id="research"> Publications and Preprints </h4>
-    <ul>
         <li>
-            <strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6208698">The Value of a Little Flexibility in Stable Matching</a></strong>
-            <br>with Daniel Freund and Sébastien Martin. 2026.
-            <!-- <br>Major Revision at <b style="color: navy; font-weight: bold;">Operations Research</b>, 2026. -->
-            <ul>
-                <li>Earlier version accepted at the <b style="color: navy; font-weight: bold;">Twenty-Seventh ACM Conference on Economics and Computation (EC'26)</b>, 2026.</li>
-                <!-- <li>Accepted for presentation at 2024 INFORMS Manufacturing and Service Operations Management (MSOM) Conference</li>
-                <li>Accepted for presentation at 2024 INFORMS Revenue Management and Pricing (RMP) Conference</li>
-                <li>Accepted for presentation at 2024 Marketplace Innovation Workshop</li> -->
-            </ul>
+          <span class="pub-title">Stay, Reposition, or Recharge: Battery-Aware Operation of Robotaxi Fleets</span>
+          <span class="pub-authors">with Philipp Af&egrave;che and Saif Benjaafar</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://drive.google.com/file/d/1Vqcn4FX0cdQsUGoSideHCMrAIQoLg-bP/view?usp=sharing">SSRN</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="pub-title">The Value of a Little Flexibility in Stable Matching</span>
+          <span class="pub-authors">with Daniel Freund and S&eacute;bastien Martin</span>
+          <span class="pub-venue">Under review at <em>Operations Research</em>, 2026</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6208698">SSRN</a>
+          </span>
+          <ul class="pub-notes">
+            <li>Earlier version accepted at the Twenty-Seventh ACM Conference on Economics and Computation (EC&rsquo;26), 2026.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="pub-title">Two-sided Flexibility in Platforms</span>
+          <span class="pub-authors">with Daniel Freund and S&eacute;bastien Martin</span>
+          <span class="pub-venue">Major revision at <em>Operations Research</em>, 2026</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://doi.org/10.48550/arXiv.2404.04709">arXiv</a>
+          </span>
+          <span class="pub-award"><span class="emoji">&#11088;</span> Winner of the MIT Operations Research Center (ORC) Best Student Paper Award, 2024</span>
+        </li>
+
+        <li>
+          <span class="pub-title">On the Power of Delayed Flexibility: Balls, Bins, and a Few Opaque Promotions</span>
+          <span class="pub-authors">with Daniel Freund and Chamsi Hssaine</span>
+          <span class="pub-venue">Major revision at <em>Operations Research</em>, 2026</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://arxiv.org/abs/2306.01968">arXiv</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="pub-title">On the Supply of Autonomous Vehicles in Platforms</span>
+          <span class="pub-authors">with Daniel Freund and Ilan Lobel</span>
+          <span class="pub-venue"><em>Manufacturing &amp; Service Operations Management</em>, 28(2): 496&ndash;516, 2025</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2024.1175">journal</a>
+          </span>
+          <ul class="pub-notes">
+            <li>Earlier version accepted at the Twenty-Fifth ACM Conference on Economics and Computation (EC&rsquo;24), 2024.</li>
+            <li>Accepted for presentation at the 2024 INFORMS MSOM Supply Chain Management SIG Conference.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="pub-title">Overbooking with Bounded Loss</span>
+          <span class="pub-authors">with Daniel Freund</span>
+          <span class="pub-venue"><em>Mathematics of Operations Research</em>, 48(3): 1344&ndash;1363, 2022</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://pubsonline.informs.org/doi/10.1287/moor.2022.1293">journal</a>
+          </span>
+          <ul class="pub-notes">
+            <li>Earlier version accepted at the Twenty-Second ACM Conference on Economics and Computation (EC&rsquo;21), 2021.</li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <h2 class="section-title">Work in Progress</h2>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-title">Supply, Compete, or Coordinate? Dual-Channel Design for Autonomous Vehicles</span>
+          <span class="pub-authors">with Zhen Lian</span>
         </li>
         <li>
-            <strong><a href="https://doi.org/10.48550/arXiv.2404.04709">Two-sided Flexibility in Platforms</a></strong>
-            <br>with Daniel Freund and Sébastien Martin. 
-            <br>Major Revision at <b style="color: navy; font-weight: bold;">Operations Research</b>, 2026.
-            <ul>
-                <li>Winner of <b style="color: navy; font-weight: bold;">MIT Operations Research Center (ORC) Best Student Paper Award</b>, 2024</li>
-                <!-- <li>Accepted for presentation at 2024 INFORMS Manufacturing and Service Operations Management (MSOM) Conference</li>
-                <li>Accepted for presentation at 2024 INFORMS Revenue Management and Pricing (RMP) Conference</li>
-                <li>Accepted for presentation at 2024 Marketplace Innovation Workshop</li> -->
-            </ul>
+          <span class="pub-title">Robotaxis as Capacity Expansion: Certification-Based Pricing and Matching</span>
+          <span class="pub-authors">with Xuchen Liu, Huiwen Jia and Siqian Shen</span>
         </li>
+      </ul>
+
+      <h2 class="section-title">PhD Dissertation</h2>
+      <ul class="pub-list">
         <li>
-            <strong><a href="https://arxiv.org/abs/2306.01968">On the Power of Delayed Flexibility: Balls, Bins, and a Few Opaque Promotions</a></strong>
-            <br>with Daniel Freund and Chamsi Hssaine.
-            <br>Major Revision at <b style="color: navy; font-weight: bold;">Operations Research</b>, 2026.
-            <!-- <ul>
-                <li>Accepted for presentation at 2025 Marketplace Innovation Workshop</li>
-            </ul> -->
+          <span class="pub-title">Flexibility in Platform Operations</span>
+          <span class="pub-authors">MIT, 2025</span>
+          <span class="pub-links">
+            <a class="pub-badge" href="https://dspace.mit.edu/handle/1721.1/162068">MIT DSpace</a>
+          </span>
+          <span class="pub-award"><span class="emoji">&#11088;</span> <a href="https://www.mmi.mit.edu/roosaward">Winner of the Dan and Eva Roos Thesis Prize, 2025</a></span>
         </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Talks ===================== -->
+    <section id="talks">
+      <h2 class="section-title">Talks</h2>
+      <ul class="entry-list">
+
         <li>
-            <strong><a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2024.1175">On the Supply of Autonomous Vehicles in Platforms</a></strong>
-            <br>with Daniel Freund and Ilan Lobel.
-            <br><b style="color: navy; font-weight: bold;">Manufacturing & Service Operations Management</b>, 2025.
-            <ul>
-                <li>Earlier version accepted at the <b style="color: navy; font-weight: bold;">Twenty-Fifth ACM Conference on Economics and Computation (EC'24)</b>, 2024.</li>
-                <li>Accepted for presentation at <b style="color: navy; font-weight: bold;">2024 INFORMS MSOM Supply Chain Management SIG Conference</b></li>
-                <!-- <li>Accepted for presentation at 2023 INFORMS RMP Conference</li>
-                <li>Accepted for presentation at 2023 Marketplace Innovation Workshop</li> -->
-            </ul>
+          <span class="entry-title">Stay, Reposition, or Recharge: Battery-Aware Operation of Robotaxi Fleets</span>
+          <ul class="detail-list">
+            <li>INFORMS Annual Meeting, Nov 2026, San Francisco</li>
+            <li>Lyft Rideshare Seminar Series, Oct 2026, San Francisco</li>
+            <li>MSOM Conference, Jul 2026, Cambridge</li>
+          </ul>
         </li>
+
         <li>
-            <strong><a href="https://pubsonline.informs.org/doi/10.1287/moor.2022.1293">Overbooking with Bounded Loss</a></strong>
-            <br>with Daniel Freund.
-            <br><b style="color: navy; font-weight: bold;">Mathematics of Operations Research</b>, 2022.
-            <ul>
-                <li>Earlier version accepted at the <b style="color: navy; font-weight: bold;">Twenty-Second ACM Conference on Economics and Computation (EC'21)</b>, 2021.</li>
-                <!-- <li>Accepted for presentation at 2021 Marketplace Innovation Workshop</li> -->
-            </ul>
+          <span class="entry-title">The Value of a Little Flexibility in Stable Matching</span>
+          <ul class="detail-list">
+            <li>INFORMS APS Conference, Jul 2025, Atlanta</li>
+          </ul>
         </li>
-    </ul>
 
-    <h4> Work in Progress </h4>
-    <ul>
         <li>
-            <strong>Stay, Reposition, or Recharge: Battery-Aware Operation of Robotaxi Fleets</strong>
-            <br>with Philipp Afèche and Saif Benjaafar.
+          <span class="entry-title">On the Power of Delayed Flexibility: Balls, Bins, and a Few Opaque Promotions</span>
+          <ul class="detail-list">
+            <li>Marketplace Innovation Workshop, May 2025, Virtual</li>
+          </ul>
         </li>
-        <!-- <li>
-            <strong>Robotaxis as Capacity Expansion: Certification-Based Pricing and Matching</strong>
-            <br>with Huiwen Jia, Xuchen Liu and Siqian Shen.
-        </li> -->
-    </ul>
 
-    <h4> PhD Dissertation </h4>
-    <p>
-        <strong>
-            <a href="https://dspace.mit.edu/handle/1721.1/162068">Flexibility in Platform Operations</a>
-        </strong>
-    </p>
-    
-    <ul>
         <li>
-            Winner of the <a href="https://www.mmi.mit.edu/roosaward">Dan and Eva Roos Thesis Prize</a>, 2025
-        </li>
-    </ul>
-
-    <hr>
-
-    <h4 id="teaching">Teaching</h4>
-    <ul>
-        <li>Introduction To Operations Management, MIT 15.761 | Teaching Assistant
-              <ul>
-                <li>Graduate (MBA, MBAn, Masters, PhDs), Spring 2023. (200 students). <a class="hidelink" href="student_eval_2023.pdf"><button class="button-link"><font color="#00008B">students anonymous evaluation</font></button></a></li>
-                <li>Graduate (MBA, MBAn, Masters, PhDs), Spring 2022. (200 students). <a class="hidelink" href="student_eval_2022.pdf"><button class="button-link"><font color="#00008B">students anonymous evaluation</font></button></a></li>
-              </ul>
-        </li>
-        <li>Common Experience in Operations Research, MIT 15.S25 | Teaching Assistant
-              <ul>
-                <li>Graduate (PhDs), Summer 2022. (20 students)</li>
-              </ul>
-        </li>
-        <li>Ordinary Differential Equations, Columbia University Math 2030 | Teaching Assistant
-              <ul>
-                <li>Undergraduate, Fall 2018. (40 students)</li>
-              </ul>
-        </li>
-        <li>Probability for Engineers, Columbia University IEOR E3658 | Teaching Assistant
-              <ul>
-                <li>Undergraduate, Fall 2018. (80 students)</li>
-              </ul>
-        </li>
-    </ul>
-
-    <hr>
-
-      
-<!--     <h4> Recent Talks </h4>
-    <ul>
-        <li> ''Two-sided Flexibility in Platforms,'' MIT LIDS Student Conference, Feb 2024; Xi'an Jiaotong University, Jan 2024; Shanghai University of Finance and Economics, Dec 2023.</li>
-        <li> ''On the Supply of Autonomous Vehicles in Platforms,'' INFORMS, Oct 2023; Cornell Young Reseachers Workshop, Oct 2023; MSOM Conference, Jun 2023; INFORMS, Oct 2022; Marketplace Innovation Workshop, 2023.</li>
-        <li> ''Overbooking with Bounded Loss,'' EC'21, Jul 2021; INFORMS, Oct 2021; ORC Student Seminar, Apr 2022.</li>
-    </ul> -->
-
-    <h4 id="talks">Recent Talks</h4>
-    <ul>
-        <li> <strong>The Value of a Little Flexibility in Stable Matchings</strong>
-            <ul>
-                <li>INFORMS APS Conference, Jul 2025, Atlanta</li>
-            </ul>
+          <span class="entry-title">Two-sided Flexibility in Platforms</span>
+          <ul class="detail-list">
+            <li>UC Berkeley eMERGE Seminar Series, Mar 2026, Berkeley</li>
+            <li>INFORMS Annual Meeting, Oct 2025, Atlanta</li>
+            <li>INFORMS APS Conference, Jul 2025, Atlanta</li>
+            <li>University of British Columbia, Imperial College, London Business School, University College London, National University of Singapore, New York University, University of Toronto, Duke University, Stanford University, Columbia University</li>
+            <li>INFORMS Annual Meeting, Oct 2024, Seattle</li>
+            <li>Inaugural OM Rookiepalooza at Kellogg, Oct 2024, Evanston</li>
+            <li>MIT ORC Fall Seminar Series, Nov 2024, Cambridge</li>
+            <li>RMP Conference, Jul 2024, Los Angeles</li>
+            <li>MSOM Conference, Jul 2024, Minneapolis</li>
+            <li>Marketplace Innovation Workshop, May 2024, Virtual</li>
+            <li>MIT LIDS Student Conference, Feb 2024, Cambridge</li>
+            <li>Xi&rsquo;an Jiaotong University, Jan 2024, Xi&rsquo;an, China</li>
+            <li>Shanghai University of Finance and Economics, Dec 2023, Shanghai, China</li>
+          </ul>
         </li>
 
-        <li> <strong><a href="https://arxiv.org/abs/2306.01968">On the Power of Delayed Flexibility: Balls, Bins, and a Few Opaque Promotions</a></strong>
-            <ul>
-                <li>Marketplace Innovation Workshop, May 2024, Virtual</li>
-            </ul>
+        <li>
+          <span class="entry-title">On the Supply of Autonomous Vehicles in Platforms</span>
+          <ul class="detail-list">
+            <li>Ivey Business School, Mar 2026, London, Canada</li>
+            <li>Guest lecture for INDENG 150: Production Systems and INDENG 250: Production and Logistics Models, Nov 2025, Berkeley</li>
+            <li>MIT Operations Management Seminar, Oct 2024, Cambridge</li>
+            <li>MSOM Conference Supply Chain Management SIG, Jun 2024, Minneapolis</li>
+            <li>INFORMS Annual Meeting, Oct 2023, Phoenix</li>
+            <li>Cornell Young Researchers Workshop, Oct 2023, Ithaca</li>
+            <li>MSOM Conference, Jun 2023, Montreal, Canada</li>
+            <li>INFORMS Annual Meeting, Oct 2022, Indianapolis</li>
+            <li>Marketplace Innovation Workshop, May 2023, Virtual</li>
+          </ul>
         </li>
-        
-        <li> <strong><a href="https://doi.org/10.48550/arXiv.2404.04709">Two-sided Flexibility in Platforms</a></strong>
-            <ul>
-                <li>UC Berkeley eMERGE Seminar Series, Mar 2026, Berkeley</li>
-                <li>INFORMS Annual Meeting, Oct 2025, Atlanta</li>
-                <li>INFORMS APS Conference, Jul 2025, Atlanta</li>
-                <li>University of British Columbia, Imperial College, London Business School, University College London, National University of Singapore, New York University, University of Toronto, Duke University, Stanford University, Columbia University</li>
-                <li>INFORMS Annual Meeting, Oct 2024, Seattle</li>
-                <li>Inaugural OM Rookiepalooza at Kellogg, Oct 2024, Evanston</li> 
-                <li>MIT ORC Fall Seminar Series, Nov 2024, Cambridge</li>
-                <li>MSOM Conference, Jul 2024, Minneapolis</li>
-                <li>Marketplace Innovation Workshop, May 2024, Virtual</li>
-                <li>MIT LIDS Student Conference, Feb 2024, Cambridge</li>
-                <li>Xi'an Jiaotong University, Jan 2024, Xi'an</li>
-                <li>Shanghai University of Finance and Economics, Dec 2023, Shanghai</li>
-            </ul>
-        </li>
-        <li> <strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4178508">On the Supply of Autonomous Vehicles in Platforms</a></strong>
-            <ul>
-                <li>Guest lecture for INDENG 150: Production Systems and INDENG 250: Production and Logistics Models, Nov 2025, Berkeley</li>
-                <li>MIT Operations Management Seminar, Oct 2024, Cambridge</li>
-                <li>MSOM Conference Supply Chain Management SIG, Jun 2024, Minneapolis</li>
-                <li>INFORMS Annual Meeting, Oct 2023, Phoenix</li>
-                <li>Cornell Young Researchers Workshop, Oct 2023, Ithaca</li>
-                <li>MSOM Conference, Jun 2023, Montreal</li>
-                <li>INFORMS Annual Meeting, Oct 2022, Indianapolis</li>
-                <li>Marketplace Innovation Workshop, May 2023, Virtual</li>
-            </ul>
-        </li>
-        <li> <strong><a href="https://pubsonline.informs.org/doi/10.1287/moor.2022.1293">Overbooking with Bounded Loss</a></strong>
-            <ul>
-                <li>EC'21, Jul 2021, Virtual</li>
-                <li>INFORMS Annual Meeting, Oct 2021, Virtual</li>
-                <li>ORC Student Seminar, Apr 2022, Cambridge</li>
-            </ul>
-        </li>
-    </ul>
 
-    <hr>
+        <li>
+          <span class="entry-title">Overbooking with Bounded Loss</span>
+          <ul class="detail-list">
+            <li>EC&rsquo;21, Jul 2021, Virtual</li>
+            <li>INFORMS Annual Meeting, Oct 2021, Virtual</li>
+            <li>ORC Student Seminar, Apr 2022, Cambridge</li>
+          </ul>
+        </li>
 
+      </ul>
+    </section>
 
-    <!-- <h4 id="experience"> Experiences </h4>
-    <ul>
-        <li>MIT Operations Research Center, <i>Research Assistant</i>, 2020 - 2025</li>
-            <ul>
-                <li>Supervisor: Daniel Freund</li>
-                <li>Incentivizing flexibility in platform operations</li>
-            </ul>
-        <li>Uber Eats Eater Realtime Pricing Team (ERTP), <i>Applied Scientist Intern</i>, Summer 2023 & 2024</li>
-            <ul>
-                <li>Managers/Mentors: Ali Sadighian, Shaiza Qayyum, AJ Friend</li>
-                <!-- <li>Pricing and incentives optimization for eaters</li> -->
-            <!-- </ul>
-        <li>Simons Institute for the Theory of Computing, UC Berkeley, <i>Visiting Student</i>, Fall 2022</li>
-        <li>Industrial Engineering and Operations Research (IEOR), Columbia University, <i>Research Assistant</i>, 2018 - 2020</li>
-            <ul>
-                <li>Supervisors: Jay Sethuraman, Soulaymane Kachani</li>
-            </ul>
-        </ul>
-    <hr> -->
-    
-    <h4 id="activities"> Professional Services </h4>
-    <ul>
-        <li>Reviewer for <i>Management Science</i>, <i>Operations Research</i>, <i>Manufacturing & Service Operations Management</i>, 2025 - Present</li>
-        <li>Reviewer for ACM EC Conference, MSOM Conference, ACM STOC Conference, 2025-Present</li>
+    <!-- ===================== Teaching ===================== -->
+    <section id="teaching">
+      <h2 class="section-title">Teaching</h2>
+      <ul class="entry-list">
+
+        <li>
+          <span class="entry-title">Optimization and Simulation Modeling &ndash; Accelerated (Stanford GSB OIT 247)</span>
+          <span class="entry-meta">Instructor</span>
+          <ul class="detail-list">
+            <li>Graduate (MBA), Autumn 2026.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="entry-title">Introduction to Operations Management (MIT 15.761)</span>
+          <span class="entry-meta">Teaching Assistant</span>
+          <ul class="detail-list">
+            <li>Graduate (MBA, MBAn, Masters, PhDs), Spring 2022&ndash;2024.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="entry-title">Common Experience in Operations Research (MIT 15.S25)</span>
+          <span class="entry-meta">Teaching Assistant</span>
+          <ul class="detail-list">
+            <li>Graduate (PhDs), Summer 2022.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="entry-title">Ordinary Differential Equations (Columbia University Math 2030)</span>
+          <span class="entry-meta">Teaching Assistant</span>
+          <ul class="detail-list">
+            <li>Undergraduate, Fall 2018.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="entry-title">Probability for Engineers (Columbia University IEOR E3658)</span>
+          <span class="entry-meta">Teaching Assistant</span>
+          <ul class="detail-list">
+            <li>Undergraduate, Fall 2018.</li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ===================== Service ===================== -->
+    <section id="service">
+      <h2 class="section-title">Professional Services</h2>
+      <ul class="plain-list">
+        <li>Reviewer for <em>Management Science</em>, <em>Operations Research</em>, <em>Manufacturing &amp; Service Operations Management</em>, 2025&ndash;Present</li>
+        <li>Reviewer for ACM EC Conference, MSOM Conference, ACM STOC Conference, 2025&ndash;Present</li>
         <li>MIT ORC Seminar Series student coordinator, Fall 2023</li>
-        <li>MIT Operations Management Seminar student co-organizer, 2021-2023</li>
-    </ul>
+        <li>MIT Operations Management Seminar student co-organizer, 2021&ndash;2023</li>
+      </ul>
+    </section>
 
-   <hr>
-
-    <h4> Awards and Honors </h4>
-    <ul>
+    <!-- ===================== Awards ===================== -->
+    <section id="awards">
+      <h2 class="section-title">Awards and Honors</h2>
+      <ul class="plain-list">
         <li>The <a href="https://www.mmi.mit.edu/roosaward">Dan and Eva Roos Thesis Prize</a>, 2025</li>
         <li>MIT Operations Research Center (ORC) Best Student Paper Award, 2024</li>
         <li>The Sebastian B. Littauer Award in IEOR, Columbia University, 2020</li>
-        <li>Tau Beta Pi Honor Society, Columbia University (NY alpha Chapter), 2020</li>
-        <li>The Dean’s List, Columbia University, 2016-2020</li>
+        <li>Tau Beta Pi Honor Society, Columbia University (NY Alpha Chapter), 2020</li>
+        <li>The Dean&rsquo;s List, Columbia University, 2016&ndash;2020</li>
         <li>C.P. Davis Scholar, Columbia University, 2016</li>
-    </ul>
-    
+      </ul>
+    </section>
 
+  </main>
 
-  </div>
-  
-<!--   <footer class="footer">
-          <div class="container">
-            <p align=right>
-              <a href="http://www.mit.edu/~jcnliang/"> Page Template </a>
-            </p>
-          </div>
-  </footer> -->
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 Jiayu Kamessi Zhao</div>
+  </footer>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-links');
+      if (!btn || !menu) return;
 
+      /* Mobile menu toggle */
+      function closeMenu() {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
-</body></html>
+      /* Highlight the tab for the section currently in view */
+      var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]'));
+      var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      var header = document.querySelector('.site-header');
+
+      function setActive(el) {
+        links.forEach(function (a) {
+          var on = a.getAttribute('href') === '#' + el.id;
+          a.classList.toggle('active', on);
+          if (on) { a.setAttribute('aria-current', 'location'); } else { a.removeAttribute('aria-current'); }
+        });
+      }
+
+      function spy() {
+        var probe = window.scrollY + header.offsetHeight + 40;
+        var current = targets[0];
+        for (var i = 0; i < targets.length; i++) {
+          var t = targets[i];
+          if (t && t.getBoundingClientRect().top + window.scrollY <= probe) current = t;
+        }
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        if (atBottom) current = targets[targets.length - 1];
+        setActive(current);
+      }
+
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () { spy(); ticking = false; });
+          ticking = true;
+        }
+      }, { passive: true });
+      window.addEventListener('resize', spy);
+      spy();
+    });
+  </script>
+</body>
+</html>
